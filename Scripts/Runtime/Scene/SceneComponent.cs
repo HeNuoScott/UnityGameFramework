@@ -374,7 +374,7 @@ namespace UnityGameFramework.Runtime
             m_MainCamera = Camera.main;
         }
 
-        private void RefreshSceneOrder()
+        public void RefreshSceneOrder()
         {
             if (m_SceneOrder.Count > 0)
             {
@@ -442,7 +442,7 @@ namespace UnityGameFramework.Runtime
             }
 
             m_EventComponent.Fire(this, LoadSceneSuccessEventArgs.Create(e));
-            RefreshSceneOrder();
+            // RefreshSceneOrder();
         }
 
         private void OnLoadSceneFailure(object sender, GameFramework.Scene.LoadSceneFailureEventArgs e)
